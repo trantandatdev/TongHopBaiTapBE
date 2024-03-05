@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "4b6531fc-1110-4ffd-8696-37bab88daf0a",
+		"name": "Sequelize_app_food",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16940726"
+	},
+	"item": [
+		{
+			"name": "Xử lý like nhà hàng",
+			"item": [
+				{
+					"name": "Get Like Of Restaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurant/getLikeOfRestaurant/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"getLikeOfRestaurant",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Like Of User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurant/getLikeOfUser/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"getLikeOfUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like And DisLike",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6InZ1bGViYW9sb25nIiwiZW1haWwiOiJ2dWxlYmFvbG9uZ0BnbWFpbC5jb20ifSwiaWF0IjoxNjk2Nzc4ODczLCJleHAiOjE3MDQ1NTQ4NzN9.7Ll3D5IAcvWHiJHii6rMUQ3N9VtkV080xW0bdj2wxfg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"res_id\": 5,\r\n    \"date_like\": \"2023-01-10 19:38:41\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/restaurant/likeAndDisLike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"likeAndDisLike"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Xử lý user đặt món",
+			"item": [
+				{
+					"name": "Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6InZ1bGViYW9sb25nIiwiZW1haWwiOiJ2dWxlYmFvbG9uZ0BnbWFpbC5jb20ifSwiaWF0IjoxNjk2Nzc4ODczLCJleHAiOjE3MDQ1NTQ4NzN9.7Ll3D5IAcvWHiJHii6rMUQ3N9VtkV080xW0bdj2wxfg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 99,\r\n    \"code\": \"VLBL\",\r\n    \"arr_sub_id\": \"arr_sub_id\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/order/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"order",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Xử lý đánh giá nhà hàng",
+			"item": [
+				{
+					"name": "Add Rate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsImZ1bGxfbmFtZSI6InZ1bGViYW9sb25nIiwiZW1haWwiOiJ2dWxlYmFvbG9uZ0BnbWFpbC5jb20ifSwiaWF0IjoxNjk2NzgxNDM4LCJleHAiOjE3MDQ1NTc0Mzh9.izkXXwbYCImpNROFkACBoWAdL2BSPISfZWcxUMHP8sU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"res_id\": 5,\r\n    \"amount\": 99,\r\n    \"date_rate\": \"2023-01-10 19:38:41\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/restaurant/addRate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"addRate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rate Of Restaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurant/getRateOfRestaurant/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"getRateOfRestaurant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rate Of User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurant/getRateOfUser/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"getRateOfUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\": \"vulebaolong6\",\r\n    \"email\": \"vulebaolong6@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"vulebaolong@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
