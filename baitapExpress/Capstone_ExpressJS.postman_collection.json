@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "e747960d-d789-455f-b7de-900f3c8dd811",
+		"name": "Capstone_ExpressJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31034266"
+	},
+	"item": [
+		{
+			"name": "AUTH CONTROLLER",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"edit@gmail.com\",\n    \"mat_khau\" : \"1234\", \n    \"ho_ten\": \"Edit\",\n    \"tuoi\": 999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"tam@gmail.com\",\n    \"mat_khau\":\"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER CONTROLLER",
+			"item": [
+				{
+					"name": "USER INFO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/info/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"info",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CHECK SAVE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjR9LCJpYXQiOjE3MDI4ODYzMjZ9.JzZr-ZeOToBsM7ojYOOROdVSebeFTCakk7X8OJohx1E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/checkSave/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"checkSave",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE LIBRARY",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjR9LCJpYXQiOjE3MDI4ODYzMjZ9.JzZr-ZeOToBsM7ojYOOROdVSebeFTCakk7X8OJohx1E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/getSave-byUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getSave-byUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Img",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjV9LCJpYXQiOjE3MDI2MzQ2NjF9.Dqg8pS6YMNaFFmwx20shmHmenigQBpwPaF9eIHE6EG4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userImg",
+									"type": "file",
+									"src": "/Users/macbook/Desktop/Cat.jpg"
+								},
+								{
+									"key": "ten_hinh",
+									"value": "mèo",
+									"type": "text"
+								},
+								{
+									"key": "mo_ta",
+									"value": "méo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/upload-img",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"upload-img"
+							],
+							"query": [
+								{
+									"key": "userImg",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE IMG",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjR9LCJpYXQiOjE3MDI4ODYzMjZ9.JzZr-ZeOToBsM7ojYOOROdVSebeFTCakk7X8OJohx1E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/save-img/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"save-img",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT PROFILE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjV9LCJpYXQiOjE3MDI2MzQ2NjF9.Dqg8pS6YMNaFFmwx20shmHmenigQBpwPaF9eIHE6EG4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userAvatar",
+									"type": "file",
+									"src": "/Users/macbook/Desktop/Cat.jpg"
+								},
+								{
+									"key": "mat_khau",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/edit-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"edit-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE SAVE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjR9LCJpYXQiOjE3MDI4Njk2MDV9.17fO8zdHhSnh0cxlXEDY0yDmSa3dUdLYjOxWVlFrGfs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/unsave/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"unsave",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IMG CONTROLLER",
+			"item": [
+				{
+					"name": "IMG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/image/get-img",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image",
+								"get-img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IMG BY USER ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/image/getImg-byUser/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image",
+								"getImg-byUser",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IMG BY NAME",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/image/get-img-by-name/m",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image",
+								"get-img-by-name",
+								"m"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "COMMENT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjR9LCJpYXQiOjE3MDI4Njk2MDV9.17fO8zdHhSnh0cxlXEDY0yDmSa3dUdLYjOxWVlFrGfs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"noi_dung\" : \"asdasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/image/comment/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image",
+								"comment",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IMG",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/image/delete-img/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image",
+								"delete-img",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
